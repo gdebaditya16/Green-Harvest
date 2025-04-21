@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <h1>Green Harvest Network</h1>
+    <p>Connect farmers directly with retailers</p>
+    <div class="outer">
+    <div class="container">
+        <h2>Sign In</h2>
+        <p>Enter your details to continue</p>
+
+        <label id="full_name1">Full Name</label>
+        <input type="text" placeholder="Enter your full name" id="full_name">
+
+        <label id="mobile_no1">Mobile Number</label>
+        <input type="tel" placeholder="Enter your 10 digit mobile number" id="mobile_no">
+
+        <label id="email_id1">Email-Id</label>
+        <input type="email" placeholder="Enter your email-id" id="email_id">
+        
+        <div class="job">
+        <label>I am a:</label>
+        <input type="radio" name="role_select" id="buyer" value="buyer">
+        <label for="buyer">Buyer</label>
+        <input type="radio" name="role_select" id="seller" value="seller">
+        <label for="seller"></label>Seller
+        </div>
+        <button onclick="info()">Continue</button>
+        
+
+    </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

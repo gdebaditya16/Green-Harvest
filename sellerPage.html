@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sellerPage.css">
+</head>
+<body>
+    <h1>Farmer Registration</h1>
+    <p id="p1">Tell us about your farm</p>
+    <div class="outer">
+    <div class="container">
+        <h2>Farm Details</h2>
+        <p>Complete your profile as a seller</p>
+        
+        <label>Farm Address</label>
+        <input type="text" placeholder="Enter your farm address" id="farm_address">
+
+        <label>Crops You Grow</label>
+        <input type="text" placeholder="Enter the crops separated by commas(e.g. Tomatoes,Potatoes,Onions)" id="crops_you_grow">
+
+        <div class="dropdown">
+            <label for="season-select">Primary Harvest Season</label>
+            <div class="dropdown-select" onclick="toggleDropdown()">
+              <span id="selected-season">Select season</span>
+              <i class="arrow">&#9662;</i>
+            </div>
+            <ul class="dropdown-menu" id="season-menu">
+              <li onclick="selectSeason('Spring')">Spring</li>
+              <li onclick="selectSeason('Summer')">Summer</li>
+              <li onclick="selectSeason('Fall')">Fall</li>
+              <li onclick="selectSeason('Winter')">Winter</li>
+              <li onclick="selectSeason('Year-round')">Year-round</li>
+            </ul>
+        </div>
+        <label>Items You Sell</label>
+        <input type="text" placeholder="Enter items you sell,separated by commas">
+
+        <button>Complete Registration</button>
+    </div>
+    </div>
+</div>
+
+<script src="sellerPage.js"></script>
+</body>
+</html>
