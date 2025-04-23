@@ -13,7 +13,7 @@ body {
   display: flex;
   width: 100%;
   margin-bottom: 0;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(130deg , #395039,#58b788);
   padding: 0.8rem; 
@@ -22,7 +22,14 @@ body {
 }
 
 
+ .navbar .logo {
+  padding: 0 40px;
+  
+
+ }
  .navbar .logo img{
+  border: 3px solid #797171;
+  box-shadow: -2px 3px 10px #241d1d;
   height: 55px;
   width: 55px;
   border-radius: 50%;
@@ -550,7 +557,6 @@ font-size: larger;
     grid-template-columns: 1fr;
   }
 }
-
 
 
 
