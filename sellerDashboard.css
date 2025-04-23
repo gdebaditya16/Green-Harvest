@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+.navbar{
+    background-color: bisque;
+    height:3em;
+    display: flex;
+    width:100%;
+    align-items: center;
+    
+}
+#Logo{
+    margin-right:20rem;
+    margin-left: 1rem;
+    color:brown;
+    text-align: left;
+}
+.nav-board{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.2rem;
+    margin-right:1rem;  
+    width:100%;
+}
+.nav{
+    text-align:end;
+}
+.nav-board a{
+    text-decoration: none;;
+}
+.nav-board button{
+    padding-right:0.2rem;
+    margin-top:0;
+}
+.hero{
+    height: 30rem;
+    
+    padding:2rem;
+    background-color: azure;    
+}
+.profile{
+    border: 2px solid  transparent;
+    border-radius: 10px;
+    height:100%;
+    background-color: rgb(156, 209, 218);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.profile p{
+    font-size:1.2rem;
+    font-weight:700;
+    color:rgb(11, 58, 58);
+}
+.icon{
+    height:4rem;
+    width:4rem;
+    background-color: aqua;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile p{
+    margin:0.3rem;
+}
+.contact-info{
+    background-color:azure;
+    height: 12rem;
+    padding:2rem;
+    color:rgb(7, 61, 71);
+}
+.inner{
+    height:100%;
+    background-color: rgb(156, 209, 218);
+    border:2px solid transparent;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+.inner h3{
+    margin-bottom: 0.25rem;
+}
+.inner p{
+    margin-top:0.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: bolder;
+}
+label{
+    font-weight: 600;
+}
+/* body { font-family: Arial, sans-serif; padding: 20px; } */
+.passenger { 
+    margin-bottom: 10px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+    .passenger input { 
+        margin-right: 10px; 
+    }
+    button { 
+        margin-top: 10px; 
+        background-color: aquamarine;
+        padding:0.2rem;
+        border:2px solid transparent;
+        border-radius:5px;
+        margin-left:0.8rem;
+    }
+.Selling-Requests{
+    color:rgb(9, 85, 99); 
+    background-color: azure;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.Selling-Requests h2{
+    margin-left:10px;
+}
+

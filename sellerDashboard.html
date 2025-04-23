@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sellerDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <!-- <h1>Welcome, !</h1> -->
+    <div class="navbar">
+        
+        <div class="nav-board">
+            <h2 id="Logo">Seller Dashboard</h2>
+            <div class="nav">
+            <a href="#">Dashboard</a>
+            <button><a href="index.html">Logout</a></button>
+        </div>
+    </div>
+    </div>
+    <div class="hero">
+    <div class="profile">
+        <div class="icon"><span id="initial"></span></div>
+        <label>Farm Address:</label>
+        <p><span id="displayAddress"></span></p>
+        <label>Crops:</label>
+        <p><span id="displayCrops"></span></p>
+        <label>Sell Items:</label>
+        <p><span id="sell_items"></span></p>
+    </div>
+</div>
+    <hr>
+<div class="contact-info">
+    <div class="inner">
+        
+        <h3>Contact Info</h3>
+        
+        <i class="fa-solid fa-address-book"></i>
+        <label>Mobile</label>
+        <p><span id="mobile_no"></span></p>
+        <i class="fa-solid fa-envelope"></i>
+        <label>Email</label>
+        <p><span id="email"></span></p>
+
+    </div>
+</div>
+<hr>
+<div class="Selling-Requests">
+    <h2>Selling Request</h2>
+  <div id="passengerList"></div>
+  <button onclick="addPassenger()">Sell More</button>
+  <button onclick="submit()">Submit</button>
+</div>
+    
+</body>
+</html>
+<script>
+    const name=localStorage.getItem('full_name');
+    const email=localStorage.getItem('email_id');
+    const mobile=localStorage.getItem('mobile_no');
+    const user = localStorage.getItem('farm_address');
+    const crops= localStorage.getItem('crops_you_grow');
+    const item_sell=localStorage.getItem('sell_items');
+    
+    
+    document.getElementById('initial').textContent=name.trim()
+    .split(/\s+/)
+    .map(word => word[0].toUpperCase())
+    .join('');;
+    document.getElementById('email').textContent=email;
+    document.getElementById('mobile_no').textContent=mobile;
+    document.getElementById('displayAddress').textContent = user;
+    document.getElementById('displayCrops').textContent = crops;
+    document.getElementById('sell_items').textContent = item_sell;
+
+    let passengerCount = 0;
+
+    function addPassenger() {
+      passengerCount++;
+
+      const container = document.createElement("div");
+      container.className = "passenger";
+      container.id = `passenger-${passengerCount}`;
+
+      container.innerHTML = `
+        <input type="text" placeholder="Stock Name" name="name">
+        <input type="number" placeholder="Quantity" name="age" min="0">
+        <input type="number" placeholder="Price" name="age" min="10">
+        
+        <button onclick="removePassenger('${container.id}')">Remove</button>
+      `;
+
+      document.getElementById("passengerList").appendChild(container);
+    }
+
+    function removePassenger(id) {
+      document.getElementById(id).remove();
+    }
+    function submit(){
+        alert("Your entered items are submitted")
+        window.location.href='index.html';
+    }
+  </script>
+  

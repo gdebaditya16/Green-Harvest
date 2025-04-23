@@ -14,5 +14,16 @@ function toggleDropdown() {
     if (!dropdown.contains(event.target)) {
       document.getElementById("season-menu").style.display = "none";
     }
-  });
+  })
+  function saveData(){
+    const name = document.getElementById('farm_address').value;
+    const crops=document.getElementById('crops_you_grow').value;
+    const sell_items=document.getElementById('sell_items').value;
+    localStorage.setItem('farm_address', name);
+    localStorage.setItem('crops_you_grow', crops);
+    localStorage.setItem('sell_items', sell_items);
+    window.location.href = 'sellerDashboard.html';
+  }
+
+  
   
