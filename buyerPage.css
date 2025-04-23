@@ -3,12 +3,29 @@
     margin:0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
+.main::before{
+    content: "";
+    background-image: url("https://mediaproxy.salon.com/width/1200/https://media.salon.com/2021/08/farmers-market-produce-0812211.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #070806;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .intro{
     margin-top: 3rem;
-    margin-bottom: 5rem;
+    font-weight: 900;
     text-align: center;
 }
+.intro h1{
+    color: rgb(37, 50, 2);
+}
 .intro p{
+    color: rgb(46, 27, 2);
     margin-top: .5rem;
 }
 .outer{
@@ -21,27 +38,45 @@
 }
 .outer p{
     margin-top: .5rem;
+    font-weight: 600;
+    color: #fff;
     text-align: center;
 }
 
-.container{    
+.container{   
+margin-top: 30px;
     padding: 1rem;
     display:flex;
     flex-direction: column;
     /* justify-content:center;
     align-items:center; */
+    border-radius: 20px;
+    box-shadow: -5px 6px 10px;
+    background-color: rgba(33, 33, 10, 0.441);
+    opacity: 0.7;
     border:1px solid black;
 }
+.container h2{
+    color: rgb(4, 231, 84);
+    font-weight: 900;
+}
 .container label{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
     margin-top: 1rem;
 }
 .container input{
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: #0000008a;
+    color: #ffffff;
     margin-top: .5rem;
 }
 .time{
     margin-top:1rem;
 }
-button{
+.container button{
+    font-weight: 500;
     margin-top: 1rem;
     padding: 0.5rem;
     border-radius: 5px;
