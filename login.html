@@ -3,37 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>logIn</title>
     <link rel="stylesheet" href="login.css">
 </head>
-<body>
-    <h1>Green Harvest Network</h1>
-    <p>Connect farmers directly with retailers</p>
-    <div class="outer">
-    <div class="container">
-        <h2>Sign In</h2>
-        <p>Enter your details to continue</p>
+<body> 
+    <div class="main_conc">
 
-        <label id="full_name1">Full Name</label>
-        <input type="text" placeholder="Enter your full name" id="full_name">
+        <h1 class="main_heading">Green Harvest Network</h1>
+        <p class="main_para">Connect farmers directly with retailers</p>
+        <div class="outer">
+        <div class="container">
+            <h2>Sign In</h2>
+            <p>Enter your details to continue</p>
 
-        <label id="mobile_no1">Mobile Number</label>
-        <input type="tel" placeholder="Enter your 10 digit mobile number" id="mobile_no">
+            <div class="form_devider"></div>
+    
+            <label id="full_name1">Full Name</label>
+            <input type="text" placeholder="Enter your full name" id="full_name">
+    
+            <label id="mobile_no1">Mobile Number</label>
+            <input type="tel" placeholder="Enter your 10 digit mobile number" id="mobile_no">
+    
+            <label id="email_id1">Email-Id</label>
+            <input type="email" placeholder="Enter your email-id" id="email_id">
 
-        <label id="email_id1">Email-Id</label>
-        <input type="email" placeholder="Enter your email-id" id="email_id">
-        
-        <div class="job">
-        <label>I am a:</label>
-        <input type="radio" name="role_select" id="buyer" value="buyer">
-        <label for="buyer">Buyer</label>
-        <input type="radio" name="role_select" id="seller" value="seller">
-        <label for="seller"></label>Seller
+            <label id="login_pass1">Password</label>
+            <input type="password" placeholder="Enter Password" id="login_pass">
+       
+            
+            <div class="job">
+            <label>I am a:</label>
+            <input type="radio" name="role_select" id="buyer" value="buyer">
+            <label for="buyer">Buyer</label>
+            <input type="radio" name="role_select" id="seller" value="seller">
+            <label for="seller">Seller</label>
+            </div>
+            <button onclick="info()">Continue</button>
+            <div class="already">
+                 <div>New User? <a href="#">Register Now</a></div>
+                <a class="forg_pass" href="#">forget password</a>
+            </div>
+            
+    
         </div>
-        <button onclick="info()">Continue</button>
-        
+        </div>
 
-    </div>
     </div>
     <script src="login.js"></script>
 </body>

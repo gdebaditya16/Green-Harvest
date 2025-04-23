@@ -196,6 +196,7 @@ font-size: larger;
   color: rgba(242, 72, 15, 0.921);
 }
 
+
 .store_selection {
   background-color: aquamarine;
   color: rgba(255, 81, 0, 0.915);
@@ -309,15 +310,28 @@ font-size: larger;
   font-size: clamp(1.5rem, 3vw, 2rem);
   margin-bottom: 2rem;
 }
+.pre-footer input{
+  margin-top: 10px;
+  padding: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  border-color: #ffffff;
+  color: #fff;
+  opacity: 1;
+  background-color: #00000094;
+}
 
 .pre-footer button {
-  padding: 0.8rem 1.5rem;
+  margin-left: 5px;
+  font-weight: 600;
+  border: 2px solid #000;
+  background-color: #09c973;
+  box-shadow: -1px 3px 3px ;
+  padding: 8px;
   border-radius: 5px;
   border: none;
-  background-color: white;
 
-  font-weight: 600;
-  font-size: 1.1rem;
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -329,7 +343,87 @@ font-size: larger;
 .pre-footer button:hover {
   transform: scale(1.05);
 }
+.order-status {
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-left: 4px solid #28a745;
+  max-width: 500px;
+  animation: fadeIn 0.3s ease-out;
+  position: relative;
+}
 
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close-status {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #6c757d;
+  transition: color 0.2s;
+}
+
+.close-status:hover {
+  color: #dc3545;
+}
+
+.status-details p {
+  margin: 8px 0;
+  color: #495057;
+}
+
+.status-in-transit {
+  color: #fd7e14;
+  font-weight: bold;
+}
+
+.status-processing {
+  color: #17a2b8;
+  font-weight: bold;
+}
+
+.status-delivered {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #28a745;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.status-message {
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-top: 10px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.fa-spinner {
+  margin-right: 8px;
+}
 
 .footer {
   padding: 2rem 5%;
@@ -456,3 +550,13 @@ font-size: larger;
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

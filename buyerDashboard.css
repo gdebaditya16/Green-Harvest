@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1e5eb;
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    color: #2e7d32;
+    font-size: 28px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard-link, .logout {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.dashboard-link.active, .dashboard-link:hover, .logout:hover {
+    color: #2e7d32;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.profile-section, .requests-section, .contact-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.profile-section h2, .requests-section h2, .contact-section h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-info, .contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-item h3 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 18px;
+}
+
+.no-requests {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+.complete-section {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.complete-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.complete-btn:hover {
+    background-color: #1b5e20;
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-info, .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .complete-section {
+        grid-column: span 1;
+    }
+}
